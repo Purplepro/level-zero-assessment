@@ -1,0 +1,20 @@
+[project]
+name = "level-zero-assessment"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Sebastian", email = "sebastian@senulabs.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard]>=0.142.2",
+    "sqlalchemy>=2.1.4",
+]
+
+[project.scripts]
+level-zero-assessment = "level_zero_assessment:main"
+
+[build-system]
+requires = ["uv_build>=0.12.3,<0.13.0"]
+build-backend = "uv_build"
