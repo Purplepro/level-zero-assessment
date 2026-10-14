@@ -4,8 +4,8 @@ services:
     container_name: level_zero_postgres
     restart: always
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: hiddenunderneaththekeep88$@22
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
       POSTGRES_DB: jobs_db
     ports:
       - "5432:5432"
