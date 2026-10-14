@@ -6,6 +6,14 @@ from fastapi import Depends, FastAPI, HTTPException, Query
 from sqlalchemy.ext.asyncio import create_async_engine
 from sqlalchemy import ForeignKey, String, DateTime, func, URL
 from sqlalchemy.orm import mapped_column, Mapped, DeclarativeBase
+import os
+
+
+
+
+DB_PASSWORD= os.environ.get("DB_PASSWORD")
+DB_USERNAME= os.environ.get("DB_USERNAME")
+
 
 class Base(DeclarativeBase):
     pass
@@ -41,8 +49,8 @@ postgres_file_name = "jobs_db"
 
 database_url = URL.create(                                                                                                                    
         drivername="postgresql+asyncpg",                                                                                                          
-        username="postgres",
-        password="hiddenunderneaththekeep88$@22",
+        username="",
+        password="",
         host="jobs_db",
         port=5432,
         database="jobs_db",

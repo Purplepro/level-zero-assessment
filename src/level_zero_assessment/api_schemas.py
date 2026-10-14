@@ -4,8 +4,7 @@ from uuid import UUID
 from pydantic import BaseModel
 from typing import Literal
 
-
-@dataclass
+ 
 class Job(BaseModel):
     """Class for creating, updating, and keeping record of jobs.
     """
